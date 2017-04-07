@@ -23,9 +23,7 @@ const App = () => (
           <li><NavLink exact to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/teachers">Teachers</NavLink></li>
-          <li>
-            <NavLink to="/courses">Courses</NavLink>
-          </li>
+          <li><NavLink to="/courses">Courses</NavLink></li>
         </ul>       
       </header>
       <Switch>
