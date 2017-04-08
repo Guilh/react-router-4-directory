@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Course from './Course';
 
 const CourseContainer = (props) => {
@@ -18,5 +19,9 @@ const CourseContainer = (props) => {
     </div>
   );
 }
+
+CourseContainer.propTypes = {
+  data: PropTypes.array.isRequired     
+};
 
 export default CourseContainer;
