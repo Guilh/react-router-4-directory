@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
 class Home extends Component {  
-  
-  static contextTypes = {
-    router: React.PropTypes.object
-  }
-  
+    
   handleSubmit = e => {
     e.preventDefault();
     let teacherName = e.target.elements[0].value;
