@@ -11,7 +11,7 @@ class Home extends Component {
     let teacherName = e.target.elements[0].value;
     let teacherTopic = e.target.elements[1].value;
     let path = `/featured/${teacherTopic}/${teacherName}`;
-    this.context.router.history.push(path);
+    this.props.history.push(path);
   }
   
   render() {
