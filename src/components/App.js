@@ -2,11 +2,11 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  NavLink
+  Route
 } from 'react-router-dom';
 
 // App components
+import Header from './Header';
 import Home from './Home';
 import About from './About';
 import Courses from './Courses';
@@ -14,18 +14,11 @@ import Teachers from './Teachers';
 import NotFound from './NotFound';
 import Featured from './Featured';
 
-const App = () => (
+const App = (props) => (
   <Router>
     <div className="container">
-      <header>
-        <span className="icn-logo"><i className="material-icons">code</i></span>
-        <ul className="main-nav">
-          <li><NavLink exact to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/teachers">Teachers</NavLink></li>
-          <li><NavLink to="/courses">Courses</NavLink></li>
-        </ul>       
-      </header>
+      <Header />
+      
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" render={ () => <About title="About" /> }  />

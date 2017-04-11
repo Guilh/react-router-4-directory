@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Course from './Course';
 
 const CourseContainer = (props) => {
+
   let courseList = props.data;
   let courses = courseList.map((course) => {
     return <Course title={course.title}

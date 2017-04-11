@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 class Home extends Component {  
     
   handleSubmit = e => {
+    const { history } = this.props;
     e.preventDefault();
     let teacherName = e.target.elements[0].value;
     let teacherTopic = e.target.elements[1].value;
     let path = `/featured/${teacherTopic}/${teacherName}`;
-    this.props.history.push(path);
+    history.push(path);
   }
   
   render() {
